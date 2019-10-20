@@ -1,2 +1,2 @@
-# Yihwan's Gatsby Starter
-With everything ready to go.
+# Boxer Bot
+If your boxing coach were a robot.
