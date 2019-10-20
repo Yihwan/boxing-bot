@@ -92,6 +92,10 @@ class Coach extends React.Component {
           <button onClick={this.stopTimer}>Pause</button> : 
           <button onClick={this.startTimer}>Play</button>
         }
+
+        {Object.values(this.state.comboCountMap).map((clip, idx) => (
+          <button key={idx} onClick={() => { new Audio(clip).play() }}>{idx + 1}</button>
+        ))}
       </CoachContainer>
     );
   }
