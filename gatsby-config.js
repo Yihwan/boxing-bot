@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Yihwan's Gatsby Starter",
-    description: "With all the boilerplate stuff ready to go.",
+    title: "Boxer Bot",
+    description: "If your boxing coach were a robot.",
     author: `Yihwan Kim`,
   },
   plugins: [

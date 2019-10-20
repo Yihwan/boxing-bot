@@ -1,7 +1,9 @@
 import React from 'react';
 
-import { CoachContainer } from './style';
-import { attachConnectorsToContext } from 'graphql-tools';
+import { 
+  CoachContainer,
+  CurrentCombo,  
+} from './style';
 
 class Coach extends React.Component {
   state = {
@@ -37,7 +39,7 @@ class Coach extends React.Component {
     
     if (delayBetweenCombos !== newDelay) {
       this.setState({ delayBetweenCombos: newDelay });
-      
+
       this.stopTimer();
       this.startTimer();
     }
@@ -48,19 +50,21 @@ class Coach extends React.Component {
 
     return(
       <CoachContainer>
-        <div>Current Combo: {currentCombo}</div>
+        <CurrentCombo>{currentCombo}</CurrentCombo>
 
-        <label htmlFor="delayBetweenCombos">Delay between combos: {delayBetweenCombos / 1000}</label>
-        <input 
-          type="range" 
-          id="delayBetweenCombos" 
-          name="delayBetweenCombos" 
-          min="1000"
-          max="10000"
-          step="1000"
-          value={delayBetweenCombos}
-          onChange={this.changeDelay}
-        /> 
+        <div>
+          <label htmlFor="delayBetweenCombos">Delay between combos: {delayBetweenCombos / 1000}</label>
+          <input 
+            type="range" 
+            id="delayBetweenCombos" 
+            name="delayBetweenCombos" 
+            min="1000"
+            max="10000"
+            step="1000"
+            value={delayBetweenCombos}
+            onChange={this.changeDelay}
+          /> 
+        </div>
 
         {isTimerOn ? 
           <button onClick={this.stopTimer}>Pause</button> : 
