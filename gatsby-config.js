@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Boxer Bot",
+    title: "Boxing Bot",
     description: "If your boxing coach were a robot.",
     author: `Yihwan Kim`,
   },
